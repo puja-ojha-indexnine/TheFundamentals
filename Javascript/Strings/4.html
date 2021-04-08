@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <section class="preview">
+
+        </section>
+    </body>
+    <script>
+        let theorem = 'Pythagoream theorem';
+
+        let a=5;
+        let b=8;
+
+       let myString = 'Using *, we can work out that if the two shortest sides of a right-angled triangle have lengths of * and *, the length of the hypotenuse is *.';
+
+       myString = `Using ${ theorem}, we can work out that if the two shotest sides of a right-angled triangle length have lengths of ${a} and ${b}, the length of the hypotenuse is ${Math.pow(a,2)+Math.pow(b,2)}.`
+
+        let section = document.createElement("section");
+        section.innerHTML = '';
+        
+        let para1 = document.createElement('p');
+        para1.textContent = myString;
+        
+        section.appendChild(para1);
+        document.body.appendChild(section);
+    </script>
+</html>

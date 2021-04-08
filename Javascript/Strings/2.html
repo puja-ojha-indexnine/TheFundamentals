@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    
+
+    <body>
+        <section class="preview">
+
+        </section>
+    </body>
+    <script>
+        let quote = 'I do not like green eggs and ham. I do not like them, Sam-I-Am.';
+        let substring = 'green eggs and ham';
+
+        let quoteLength = quote.length; 
+        let index = quote.indexOf(substring);
+
+        let revisedQuote = quote.substr(0,32);
+
+        let section = document.createElement("section");
+        section.innerHTML = '';
+        
+        let para1 = document.createElement('p');
+        para1.textContent = `The quote is ${ quoteLength } characters long.`;
+        
+        let para2 = document.createElement('p');
+        para2.textContent = revisedQuote;
+        
+        section.appendChild(para1);
+        section.appendChild(para2);
+
+        document.body.appendChild(section);
+    </script>
+</html>

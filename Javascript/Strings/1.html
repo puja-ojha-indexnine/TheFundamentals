@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    
+
+    <body>
+        <section class="preview">
+
+        </section>
+    </body>
+    <script>
+        let quoteStart = "Don't judge each day ";
+        let quoteEnd = "by the harvest you reap ";
+        let finalQuote = quoteStart + quoteEnd;
+
+        let section = document.createElement("section");
+        section.innerHTML = '';
+        let para1 = document.createElement('p');
+        para1.textContent = finalQuote;
+        section.appendChild(para1);
+
+        document.body.appendChild(section);
+    </script>
+</html>

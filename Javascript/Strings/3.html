@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    
+
+    <body>
+        <section class="preview">
+
+        </section>
+    </body>
+    <script>
+        let quote = 'I dO nOT lIke gREen eGgs anD HAM';
+        let lowcase = quote.toLowerCase();
+        let str = lowcase.split(" ");
+
+        for(var i=0 ; i<str.length ; i++)
+            str[i] = str[i][0].toUpperCase() + str[i].substr(1); 
+       
+        
+        let fixedQuote = str.toString();
+        fixedQuote = fixedQuote.split(",").join(" ");
+        
+        fixedQuote = fixedQuote.replace("Green","Blue").replace("Eggs","Berries").replace("Ham","Pizza");
+        
+        
+
+        if(!~[".","!","?",";"].indexOf(fixedQuote[fixedQuote.length-1])) 
+            finalQuote = fixedQuote +".";
+
+        let section = document.createElement("section");
+        section.innerHTML = '';
+        
+        let para1 = document.createElement('p');
+        para1.textContent = fixedQuote;
+        
+        let para2 = document.createElement('p');
+        para2.textContent = finalQuote;
+        
+        section.appendChild(para1);
+        section.appendChild(para2);
+
+        document.body.appendChild(section);
+    </script>
+</html>
